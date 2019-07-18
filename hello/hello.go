@@ -5,9 +5,9 @@ import "fmt"
 const englishHelloPrefix = "Hello, "
 
 func Hello(name string) string {
-  return englishHelloPrefix + name
+	return englishHelloPrefix + name
 }
 
 func main() {
-  fmt.Println(Hello("world"))
+	fmt.Println(Hello("world"))
 }
