@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -17,6 +18,12 @@ func TestSum(t *testing.T) {
 			t.Errorf("got '%d' want '%d' given, '%v'", got, want, numbers)
 		}
 	})
+}
+
+func ExampleSum() {
+	sum := Sum([]int{1, 2, 3})
+	fmt.Println(sum)
+	// Output: 6
 }
 
 func TestSumAllTails(t *testing.T) {
@@ -41,4 +48,10 @@ func TestSumAllTails(t *testing.T) {
 		want := []int{0, 9}
 		checkSums(t, got, want)
 	})
+}
+
+func ExampleSumAllTails() {
+	sum := SumAllTails([]int{1, 3, 6, 7})
+	fmt.Println(sum)
+	// Output: [16]
 }
